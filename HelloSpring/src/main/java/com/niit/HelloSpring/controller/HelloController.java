@@ -10,18 +10,21 @@ public class HelloController {
 	public ModelAndView index(){
 		ModelAndView mv=new ModelAndView("index");
 		mv.addObject("ifUserClickedIndex",true);
+		mv.addObject("title","Home");
 		return mv;
 	}
 	@RequestMapping(value="/about")
 	public ModelAndView about(){
 		ModelAndView mv=new ModelAndView("about");
 		mv.addObject("ifUserClickedAbout",true);
+		mv.addObject("title","About us");
 		return mv;
 	}
 	@RequestMapping(value="/contact")
 	public ModelAndView contact(){
 		ModelAndView mv=new ModelAndView("contact");
 		mv.addObject("ifUserClickedContact",true);
+		mv.addObject("title","Contact us");
 		return mv;
 	}
 	

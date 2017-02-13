@@ -4,10 +4,13 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <spring:url value="/resources/css" var="css" />
 <spring:url value="/resources/js" var="js" />
 <spring:url value="/resources/images" var="images" />
+<c:set var="contextpath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -61,63 +64,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 	<!-- start header -->
-	<div class="top_bg">
-		<div class="wrap">
-			<div class="header">
-				<div class="logo">
-					<a href="index.html"><img src="${images}/logo.png" alt="" /></a>
-				</div>
-				<div class="log_reg">
-					<ul>
-						<li><a href="login.html">Login</a></li>
-						<span class="log"> or </span>
-						<li><a href="register.html">Register</a></li>
-						<div class="clear"></div>
-					</ul>
-				</div>
-				<div class="web_search">
-					<form>
-						<input type="text" value="" onfocus="this.value = '';"
-							onblur="if (this.value == '') {this.value = '';}"> <input
-							type="submit" value=" " />
-					</form>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-	</div>
-	<!-- start header_btm -->
-	<div class="wrap">
-		<div class="header_btm">
-			<div class="menu">
-				<ul>
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="products.html">products</a></li>
-					<li><a href="about.html">about</a></li>
-					<li><a href="index.html">pages</a></li>
-					<li><a href="blog.html">blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<div class="clear"></div>
-				</ul>
-			</div>
-			<div id="smart_nav">
-				<a class="navicon" href="#menu-left"> </a>
-			</div>
-
-			<!-- Header nav bar -->
+	<!-- Header nav bar -->
 			<%@include file="./shared/header.jsp"%>
-			<div class="header_right">
-				<ul>
-					<li><a href="#"><i class="art"></i><span class="color1">30</span></a></li>
-					<li><a href="#"><i class="cart"></i><span>0</span></a></li>
-				</ul>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</div>
 	
-	<!-- footer here -->
-	<%@include file="./shared/footer.jsp"%>
 	<!-- start slider -->
 	<div class="slider">
 		<!---start-image-slider---->
@@ -266,22 +215,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<p>now of $145.99</p>
 						</a> <img src="${images}/thumbs/1.jpg" alt="thumb01" /></li>
 						<li class="hide"><a href="#"><span>anns field</span>
-							<p>limited edition</p> </a><img src="${images}/thumbs/2.jpg"
+								<p>limited edition</p> </a><img src="${images}/thumbs/2.jpg"
 							alt="thumb01" /></li>
 						<li class="hide1"><a href="#"><span>prada</span>
-							<p>summer is coming</p></a><img src="${images}/thumbs/3.jpg"
+								<p>summer is coming</p></a><img src="${images}/thumbs/3.jpg"
 							alt="thumb02" /></li>
 						<li class="hide1"><a href="#"><span>casa devi</span>
-							<p>all colors available</p> </a><img src="${images}/thumbs/4.jpg"
+								<p>all colors available</p> </a><img src="${images}/thumbs/4.jpg"
 							alt="thumb03" /></li>
 						<li><a href="#"><span>mellow yellow</span>
-							<p>free delivery</p> </a><img src="${images}/thumbs/1.jpg"
+								<p>free delivery</p> </a><img src="${images}/thumbs/1.jpg"
 							alt="thumb04" /></li>
 						<li><a href="#"><span>anns field</span>
-							<p>limited edition</p> </a><img src="${images}/thumbs/5.jpg"
+								<p>limited edition</p> </a><img src="${images}/thumbs/5.jpg"
 							alt="thumb05" /></li>
 						<li><a href="#"><span>anns field</span>
-							<p>limited edition</p> </a><img src="${images}/thumbs/3.jpg"
+								<p>limited edition</p> </a><img src="${images}/thumbs/3.jpg"
 							alt="thumb07" /></li>
 					</ul>
 					<!-- ei-slider-thumbs -->
@@ -368,178 +317,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="clear"></div>
 				<!-- start grids_of_2 -->
-				<div class="grids_of_2">
-					<div class="grid1_of_2">
-						<div class="span1_of_2">
-							<h2>free shipping</h2>
-							<p>Lorem Ipsum is simply dummy typesetting industry. Lorem
-								Ipsum has been the industry's standard dummy text ever since the
-								1500s, when an unknown printer took a galley of type and
-								scrambled it to make a type specimen book.</p>
-						</div>
-						<div class="span1_of_2">
-							<h2>testimonials</h2>
-							<p>It is a long established fact that a reader will be
-								distracted by the readable content of a page when looking at its
-								layout. The point of using Lorem Ipsum is that it has a
-								more-or-less normal distribution of letters, as opposed to using
-								[...]</p>
-						</div>
-					</div>
-					<div class="grid1_of_2 bg">
-						<h2>blog news</h2>
-						<div class="grid_date">
-							<div class="date1">
-								<h4>apr 01</h4>
-							</div>
-							<div class="date_text">
-								<h4>
-									<a href="#"> Donec vehicula est ac augue consectetur,</a>
-								</h4>
-								<p>There are many variations of passages of Lorem Ipsum
-									available, but the majority have suffered alteration in some
-									form</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<div class="grid_date">
-							<div class="date1">
-								<h4>feb 01</h4>
-							</div>
-							<div class="date_text">
-								<h4>
-									<a href="#"> The standard chunk of Lorem Ipsum used since
-										,,</a>
-								</h4>
-								<p>Contrary to popular belief, Lorem Ipsum is not simply
-									random text. It has roots in a piece of classical Latin
-									literature from</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-					<div class="clear"></div>
-				</div>
+				<!-- content page here -->
+				<%@include file="./shared/content.jsp" %>
+		
 			</div>
 		</div>
 	</div>
 	<!-- start footer -->
-	<div class="footer_top">
-		<div class="wrap">
-			<div class="footer">
-				<!-- start grids_of_3 -->
-				<div class="span_of_3">
-					<div class="span1_of_3">
-						<h3>text edit</h3>
-						<p>But I must explain to you how all this mistaken idea of
-							denouncing pleasure and praising pain was born and I will give
-							you a complete account of the system, and expound the actual
-							teachings of the great explorer of the truth, the master-builder
-							of human happiness.</p>
-					</div>
-					<div class="span1_of_3">
-						<h3>twitter widget</h3>
-						<p>
-							<a href="#">@Contrarypopular</a> I must explain to you how all
-							this mistaken idea of denouncing pleasure and praising pain was
-							born and I will give <a href="#">@accountofsystem</a>
-						</p>
-						<p class="top">19 days ago</p>
-						<p class="top">
-							<a href="#">@Contrarypopular</a> I must explain to you how all
-							this mistaken idea of denouncing pleasure and praising pain was
-							born and I will give <a href="#">@accountofsystem</a>
-						</p>
-						<p class="top">19 days ago</p>
-					</div>
-					<div class="span1_of_3">
-						<h3>flickr widget</h3>
-						<ul class="f_nav">
-							<li><a href="#"><img src="${images}/f_pic1.jpg" alt="" />
-							</a></li>
-							<li><a href="#"><img src="${images}/f_pic2.jpg" alt="" />
-							</a></li>
-							<li><a href="#"><img src="${images}/f_pic3.jpg" alt="" />
-							</a></li>
-							<li><a href="#"><img src="${images}/f_pic4.jpg" alt="" />
-							</a></li>
-							<li><a href="#"><img src="${images}/f_pic5.jpg" alt="" />
-							</a></li>
-							<li><a href="#"><img src="${images}/f_pic6.jpg" alt="" />
-							</a></li>
-						</ul>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- start footer -->
-	<div class="footer_mid">
-		<div class="wrap">
-			<div class="footer">
-				<div class="f_search">
-					<form>
-						<input type="text" value=""
-							placeholder="Enter email for newsletter" /> <input type="submit"
-							value="" />
-					</form>
-				</div>
-				<div class="soc_icons">
-					<ul>
-						<li><a class="icon1" href="#"></a></li>
-						<li><a class="icon2" href="#"></a></li>
-						<li><a class="icon3" href="#"></a></li>
-						<li><a class="icon4" href="#"></a></li>
-						<li><a class="icon5" href="#"></a></li>
-					</ul>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-	</div>
-	<!-- start footer -->
-	<div class="footer_bg">
-		<div class="wrap">
-			<div class="footer">
-				<!-- scroll_top_btn -->
-				<script type="text/javascript">
-					$(document).ready(function() {
-
-						var defaults = {
-							containerID : 'toTop', // fading element id
-							containerHoverID : 'toTopHover', // fading element hover id
-							scrollSpeed : 1200,
-							easingType : 'linear'
-						};
-
-						$().UItoTop({
-							easingType : 'easeOutQuart'
-						});
-
-					});
-				</script>
-				<a href="#" id="toTop" style="display: block;"><span
-					id="toTopHover" style="opacity: 1;"></span></a>
-				<!--end scroll_top_btn -->
-				<div class="f_nav1">
-					<ul>
-						<li><a href="#">home /</a></li>
-						<li><a href="#">support /</a></li>
-						<li><a href="#">Terms and conditions /</a></li>
-						<li><a href="#">Faqs /</a></li>
-						<li><a href="#">Contact us</a></li>
-					</ul>
-				</div>
-				<div class="copy">
-					<p class="link">
-						<span>© All rights reserved | Template by&nbsp;<a
-							href="http://w3layouts.com/"> W3Layouts</a></span>
-					</p>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-	</div>
+	<%@include file="./shared/footer.jsp" %>
 </body>
 </html>
